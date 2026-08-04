@@ -1,5 +1,9 @@
 function Analytics() {
-  return <div>analit</div>;
+  return (
+    <div>
+      <h1>Analytics your money</h1>
+    </div>
+  );
 }
 
 export default Analytics;
