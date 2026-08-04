@@ -9,6 +9,9 @@ function Header() {
       <li>
         <NavLink to="analytics">Analytics</NavLink>
       </li>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
     </ul>
   );
 }
