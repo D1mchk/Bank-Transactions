@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Header from "./Header";
+import LeftBar from "./LeftBar";
 
 function Layout() {
   return (
     <>
-      <Header />
+      <LeftBar />
       <main>
         <Outlet />
       </main>

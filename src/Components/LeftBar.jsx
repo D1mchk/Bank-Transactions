@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-function Header() {
+function LeftBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -26,4 +26,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default LeftBar;
