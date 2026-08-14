@@ -8,4 +8,5 @@
   --color-bar-bg: #0d0d18; /* Для боковой панели */
   --color-section-bg: #13131f; /* Для секций/карточек */
   --color-main-bg: #07070f; /* Для основного фона */
+  --color-brand-dark: #13131f;
 }

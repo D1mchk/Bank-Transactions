@@ -6,12 +6,15 @@ function LeftBar() {
 
   return (
     <div className="w-64 bg-bar-bg p-4 min-h-screen text-info">
-      <img className="w-8 my-4 mx-auto" src="./public/favicon.svg" alt="logo" />
+      <NavLinkBar to="/">
+        <img className="w-8 my-4 mx-auto" src="./favicon.svg" alt="logo" />
+      </NavLinkBar>
+
       <button
         className="text-xl font-bold mb-6 text-white"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? "Hide" : "Show"}
+        {isOpen ? "✕" : "☰"}
       </button>
       {isOpen && (
         <ul className="space-y-1">

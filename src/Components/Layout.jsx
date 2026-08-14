@@ -5,7 +5,7 @@ function Layout() {
   return (
     <div className="flex">
       <LeftBar />
-      <main className="flex-1 p-4 bg-main-bg">
+      <main className="flex-1 p-4 bg-main-bg text-white">
         <Outlet />
       </main>
     </div>
