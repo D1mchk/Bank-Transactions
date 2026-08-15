@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Accounts from "./Pages/Accounts";
 import Analytics from "./Pages/Analytics";
-import Home from "./Pages/Home";
 import Layout from "./Components/Layout";
+import Transactions from "./Pages/Transactions";
 
 function App() {
   const router = createBrowserRouter([
@@ -10,8 +10,8 @@ function App() {
       path: "/",
       element: <Layout />,
       children: [
-        { index: true, element: <Home /> },
-        { path: "accounts", element: <Accounts /> },
+        { index: true, element: <Accounts /> },
+        { path: "accounts", element: <Transactions /> },
         { path: "analytics", element: <Analytics /> },
       ],
     },

@@ -1,3 +1,4 @@
+import CardButton from "./CardButton";
 import { CardDots } from "./CardDots";
 import { ChangeIndicator } from "./ChangeIndicator";
 
@@ -9,7 +10,7 @@ export function AccountCard({ account }) {
     : `$${account.balance.toLocaleString()}`;
 
   return (
-    <div className="bg-brand-dark border border-neutral-800 rounded-2xl p-5 flex flex-col gap-4 hover:border-white transition-colors">
+    <CardButton>
       <div className="text-xs uppercase tracking-wider text-neutral-500">
         {account.type}
       </div>
@@ -26,6 +27,6 @@ export function AccountCard({ account }) {
         <ChangeIndicator value={account.changePercent} />
         <CardDots last4={account.last4} />
       </div>
-    </div>
+    </CardButton>
   );
 }

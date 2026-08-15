@@ -19,13 +19,13 @@ function LeftBar() {
       {isOpen && (
         <ul className="space-y-1">
           <li>
-            <NavLinkBar to="/accounts">All accounts</NavLinkBar>
+            <NavLinkBar to="/">Accounts</NavLinkBar>
+          </li>
+          <li>
+            <NavLinkBar to="/accounts">Transactions</NavLinkBar>
           </li>
           <li>
             <NavLinkBar to="/analytics">Analytics</NavLinkBar>
-          </li>
-          <li>
-            <NavLinkBar to="/">Home</NavLinkBar>
           </li>
         </ul>
       )}
