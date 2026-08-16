@@ -1,22 +1,18 @@
-import { useState } from "react";
 import NavLinkBar from "../UI/NavLinkBar";
+import { NavLink } from "react-router-dom";
+import CardInfo from "./CardInfo";
+import { useSelector } from "react-redux";
 
 function LeftBar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const currentUser = useSelector((state) => state.users.user);
 
   return (
-    <div className="w-64 bg-bar-bg p-4 min-h-screen text-info">
-      <NavLinkBar to="/">
+    <div className="w-64 bg-bar-bg p-4 min-h-screen overflow-hidden">
+      <NavLink to="/">
         <img className="w-8 my-4 mx-auto" src="./favicon.svg" alt="logo" />
-      </NavLinkBar>
+      </NavLink>
 
-      <button
-        className="text-xl font-bold mb-6 text-white"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? "✕" : "☰"}
-      </button>
-      {isOpen && (
+      <div className="flex flex-col justify-between">
         <ul className="space-y-1">
           <li>
             <NavLinkBar to="/">Accounts</NavLinkBar>
@@ -28,7 +24,16 @@ function LeftBar() {
             <NavLinkBar to="/analytics">Analytics</NavLinkBar>
           </li>
         </ul>
-      )}
+
+        <CardInfo>
+          <div className="text-white font-semibold text-md -mt-2">
+            {currentUser.name}
+          </div>
+          <div className="text-xs tracking-wider text-neutral-500">
+            {currentUser.plan}
+          </div>
+        </CardInfo>
+      </div>
     </div>
   );
 }

@@ -36,7 +36,7 @@ function Accounts() {
           <div className="text-xs uppercase tracking-wider text-neutral-500">
             total assets
           </div>
-          <div className={`text-3xl font-bold font-mono text-purple-400`}>
+          <div className={`text-3xl font-bold font-mono text-cyan-400`}>
             ${positiveBalance}
           </div>
           <div className="text-xs tracking-wider text-neutral-500">
@@ -48,7 +48,7 @@ function Accounts() {
           <div className="text-xs uppercase tracking-wider text-neutral-500">
             credit balance
           </div>
-          <div className={`text-3xl font-bold font-mono text-purple-400`}>
+          <div className={`text-3xl font-bold font-mono text-red-400`}>
             ${creditCard[0].balance * -1}
           </div>
           <div className="text-xs tracking-wider text-neutral-500">
