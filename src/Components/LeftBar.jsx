@@ -9,7 +9,7 @@ function LeftBar() {
   return (
     <div className="w-64 bg-bar-bg p-4 min-h-screen overflow-hidden">
       <NavLink to="/">
-        <img className="w-8 my-4 mx-auto" src="./favicon.svg" alt="logo" />
+        <img className="w-8 my-4 mb-6 mx-auto" src="./favicon.svg" alt="logo" />
       </NavLink>
 
       <div className="flex flex-col justify-between">

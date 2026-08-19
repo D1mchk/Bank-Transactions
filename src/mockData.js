@@ -309,7 +309,9 @@ export function getMoneyInOut(accountId) {
 
 // Траты по категориям (для donut chart на Analytics)
 export function getSpendingByCategory() {
-  const debitTx = transactions.filter((t) => t.type === "debit" && t.categoryId);
+  const debitTx = transactions.filter(
+    (t) => t.type === "debit" && t.categoryId
+  );
 
   return categories
     .map((cat) => {
