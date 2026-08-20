@@ -2,7 +2,7 @@ import CardButton from "./CardButton";
 import { CardDots } from "./CardDots";
 import { ChangeIndicator } from "./ChangeIndicator";
 
-export function AccountCard({ account }) {
+export function AccountCard({ account, onClick }) {
   const isCredit = account.type === "credit";
   const balanceColor = isCredit ? "text-red-400" : "text-white";
   const balanceDisplay = isCredit
@@ -10,7 +10,7 @@ export function AccountCard({ account }) {
     : `$${account.balance.toLocaleString()}`;
 
   return (
-    <CardButton>
+    <CardButton onClick={onClick}>
       <div className="text-xs uppercase tracking-wider text-neutral-500">
         {account.type}
       </div>

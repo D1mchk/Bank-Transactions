@@ -1,9 +1,18 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AccountCard } from "../Components/AccountCard";
 import CardInfo from "../Components/CardInfo";
+import { selectAccount } from "../States/slices/accountsSlice";
+import { useNavigate } from "react-router-dom";
 
 function Accounts() {
   const accounts = useSelector((state) => state.accounts.items);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  function handleClick(account) {
+    dispatch(selectAccount(account.id));
+    navigate("/accounts");
+  }
 
   const balance = accounts.reduce((sum, account) => sum + account.balance, 0);
   const positiveBalance = accounts
@@ -59,7 +68,11 @@ function Accounts() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {accounts.map((account) => (
-          <AccountCard key={account.id} account={account} />
+          <AccountCard
+            onClick={() => handleClick(account)}
+            key={account.id}
+            account={account}
+          />
         ))}
       </div>
     </div>

@@ -3,7 +3,7 @@ import { accounts } from "../../mockData";
 
 const initialState = {
   items: accounts,
-  selectedAccountId: null,
+  selectedAccountId: 1,
   loading: false,
 };
 
