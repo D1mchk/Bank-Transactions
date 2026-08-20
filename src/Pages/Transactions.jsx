@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CardInfo from "../Components/CardInfo";
 import CardButton from "../Components/CardButton";
 import { selectAccount } from "../States/slices/accountsSlice";
+import TransactionItem from "../Components/TransactionItem";
 
 function Transactions() {
   const dispatch = useDispatch();
@@ -35,8 +36,6 @@ function Transactions() {
     0
   );
 
-  console.log(positiveTransactions);
-  console.log(sumPositiveTransactions);
   return (
     <div className="my-6">
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-5">
@@ -89,7 +88,7 @@ function Transactions() {
       </section>
       <section>
         {selectedTransactions.map((transaction) => (
-          <CardInfo key={transaction.id}>{transaction.merchant}</CardInfo>
+          <TransactionItem transaction={transaction} key={transaction.id} />
         ))}
       </section>
     </div>
