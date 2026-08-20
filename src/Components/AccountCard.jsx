@@ -1,4 +1,4 @@
-import CardButton from "./CardButton";
+import CardButton from "../UI/CardButton";
 import { CardDots } from "./CardDots";
 import { ChangeIndicator } from "./ChangeIndicator";
 

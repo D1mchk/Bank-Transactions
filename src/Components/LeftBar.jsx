@@ -1,6 +1,6 @@
 import NavLinkBar from "../UI/NavLinkBar";
 import { NavLink } from "react-router-dom";
-import CardInfo from "./CardInfo";
+import CardInfo from "../UI/CardInfo";
 import { useSelector } from "react-redux";
 
 function LeftBar() {

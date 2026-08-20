@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { AccountCard } from "../Components/AccountCard";
-import CardInfo from "../Components/CardInfo";
+import CardInfo from "../UI/CardInfo";
 import { selectAccount } from "../States/slices/accountsSlice";
 import { useNavigate } from "react-router-dom";
 

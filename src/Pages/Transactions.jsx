@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import CardInfo from "../Components/CardInfo";
-import CardButton from "../Components/CardButton";
+import CardInfo from "../UI/CardInfo";
+import CardButton from "../UI/CardButton";
 import { selectAccount } from "../States/slices/accountsSlice";
 import TransactionItem from "../Components/TransactionItem";
 
